@@ -80,3 +80,11 @@ z' = z
     - 'maxX = max(maxX, x)', `maxY = max(maxY, y)`
 
 3. 回傳 `(minX, minY)` 和 `(maxX, maxY)` 兩個角點
+
+## pnpoly(x,y,vertexes)
+
+從測試點 `(x,y)` 向右射一條水平光線，統計它與多邊形邊的交點 「次數是否為奇數」。 奇數 = 在內部， 偶數 = 在外部。
+
+### 公式
+
+對每條邊
