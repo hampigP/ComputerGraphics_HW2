@@ -77,7 +77,7 @@ z' = z
 
 2. 之後每個點都做
     - `minX = min(minX, x)`, `minY = min(minY, y)`
-    - 'maxX = max(maxX, x)', `maxY = max(maxY, y)`
+    - `maxX = max(maxX, x)`, `maxY = max(maxY, y)`
 
 3. 回傳 `(minX, minY)` 和 `(maxX, maxY)` 兩個角點
 
@@ -102,7 +102,7 @@ z' = z
 
 - 給定邊界邊 AB、測試點 P，算 `vross (B-A, P-A)`：
   - 若邊界點序是 CCW (逆時針)，左側 (cross >=0) 是內側
-  - 逤是 CW (順時針)，就要取 `cross <= 0` 裁是內側
+  - 若是 CW (順時針)，就要取 `cross <= 0` 裁是內側
  
 有四種情況(S = 前一點，E = 當前點)：
 1. S 在外、 E 在外：輸出甚麼都不加
