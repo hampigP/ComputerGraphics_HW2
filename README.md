@@ -69,4 +69,14 @@ z' = z
 
 ## findBoundBox()
 
-掃一遍所有頂點，紀錄最小的 x/y、最大的 x/y。就得到一個軸對齊的 bounding box，接下來座像素填塞 (pnpoly)時，就只掃這個小矩形，
+掃一遍所有頂點，紀錄最小的 x/y、最大的 x/y。就得到一個軸對齊的 bounding box，接下來座像素填塞 (pnpoly)時，就只掃這個小矩形，不掃整個畫布
+
+演算法：
+
+1. 用第一個點初始化 `minX, minY, maxX, maxY`
+
+2. 之後每個點都做
+    - `minX = min(minX, x)`, `minY = min(minY, y)`
+    - 'maxX = max(maxX, x)', `maxY = max(maxY, y)`
+
+3. 回傳 `(minX, minY)` 和 `(maxX, maxY)` 兩個角點
